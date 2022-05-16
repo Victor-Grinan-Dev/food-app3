@@ -6,7 +6,8 @@
 .video{
     position: relative;
     width: 100vw;
-    filter: saturate(0)
+    filter: saturate(0);
+    background-repeat: none;
 }
 
 .title{

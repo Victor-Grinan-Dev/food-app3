@@ -5,17 +5,17 @@ import Navbar from './UIs/Navbar';
 import Home from './pages/Home';
 import Browse from './pages/Browse';
 import About from './pages/About';
+
+import css from './main.module.css';
 function Main() {
   return (
-    <div>
-        Main component
+    <div className={css.main}>
         <Navbar/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/browse" element={<Browse/>}/>
                 <Route path="/about" element={<About/>}/>
             </Routes>
-
         <Footer/>
     </div>
   )

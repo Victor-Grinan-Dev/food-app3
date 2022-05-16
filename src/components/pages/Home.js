@@ -4,7 +4,7 @@ import Video from '../assets/videos/Video'
 
 function Home() {
   return (
-    <div>Home
+    <div>
         <Video/>
     </div>
   )
