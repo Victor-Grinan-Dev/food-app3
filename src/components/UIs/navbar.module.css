@@ -34,6 +34,10 @@
       display: inline-block;
     }
 
+.active{
+    color: chartreuse;
+}
+
     a{
         text-decoration: none;
         color: beige;
