@@ -1,0 +1,27 @@
+
+.video-container{
+    position: relative;
+  }
+  
+.video{
+    position: relative;
+    width: 100vw;
+    filter: saturate(0)
+}
+
+.title{
+    position: absolute;
+    margin-left: 50px;
+    color: beige;
+    top: 100px;
+    left: 0;
+
+}
+.slogan{
+    position: absolute;
+    margin-left: 50px;
+    top: 200px;;
+    left: 0;
+    color: beige;
+}
+  
