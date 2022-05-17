@@ -56,7 +56,7 @@ const RecipeForm = () => {
 
   // After we have all data collected from inputs, we post the Data object from state.
   const submitData = (e) => {
-    axios.post('http://localhost:3001/recipies', data);
+    axios.post('http://localhost:3001/database', data);
   };
 
   return (

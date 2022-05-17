@@ -2,9 +2,6 @@ import React from 'react';
 import css from './footer.module.css';
 import Insta from '../assets/images/insta-white-border.png';
 
-
-
-
 function Footer() {
   return (
     <div className={css.footer}>

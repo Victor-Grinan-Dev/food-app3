@@ -9,7 +9,7 @@ const Card = ({ name, description, imgen, data, country }) => {
       <img src={imgen} alt={name} />
       <img src={country.flag} alt={country.name} />
       <div>
-        <Link to={name} state={{ data: data, country: country }}>
+        <Link to={`${name}`} state={{ data: data, country: country }}>
           See more
         </Link>
       </div>
