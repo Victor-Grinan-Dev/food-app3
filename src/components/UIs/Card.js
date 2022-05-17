@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import css from './card.module.css';
 
 const Card = ({ name, description, imgen, data, country }) => {
   return (
-    <div>
-      <h2>{name}</h2>
-      <p>{description}</p>
-      <img src={imgen} alt={name} />
-      <img src={country.flag} alt={country.name} />
-      <div>
-        <Link to={`${name}`} state={{ data: data, country: country }}>
+    <div className={css.cardBox}>
+      <h2 className={css.name}>{name}</h2>
+      <p className={css.description}>{description}</p>
+      <img src={imgen} alt={name} className={css.image}/>
+      <img src={country.flag} alt={country.name} className={css.flag}/>
+      <div className={css.seeMore}>
+        <Link to={name} state={{ data: data, country: country }}>
           See more
         </Link>
       </div>

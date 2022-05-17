@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from '../UIs/Card';
+import css from './browse.module.css'
 
 function Browse() {
   const [recipies, setRecipies] = useState([]);
@@ -23,16 +24,16 @@ function Browse() {
     });
   }, []);
 
-  // conditional rendering
   if (loading) {
     return <p>Loading</p>;
   }
 
   return (
-    <div>
+    <div className={css.browse}>
       {recipies.map((recipe) => (
         <Card
           key={recipe.id}
+          name={recipe.id}
           data={recipe}
           country={countries.find(
             (country) => country.alpha2Code === recipe.country_code
@@ -45,3 +46,4 @@ function Browse() {
 };
 
 export default Browse;
+//

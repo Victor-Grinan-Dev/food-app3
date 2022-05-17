@@ -13,7 +13,7 @@ const App = () => {
     <BrowserRouter>
       <nav className={css.nav}>
       <div className={css.logo}>
-           <NavLink Link to='/'><img src={logo}/></NavLink> 
+           <NavLink to='/'><img src={logo}/></NavLink> 
         </div>
         <NavLink to="/">Home</NavLink>
         <NavLink to="browse">Browse</NavLink>

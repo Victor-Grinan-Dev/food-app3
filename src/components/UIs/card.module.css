@@ -1,0 +1,26 @@
+.cardBox{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(208, 201, 201);
+}
+
+.name{
+    color: rgb(9, 8, 8);
+}
+.description{
+    color: rgb(218, 9, 9);
+}
+
+.image{
+    width: 200px;
+}
+
+.flag{
+    width: 50px;
+}
+
+.seeMore{
+    width: 80px;
+    height: 25px;
+    background-color: blue;
+}
