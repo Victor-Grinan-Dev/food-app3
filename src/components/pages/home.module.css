@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+}
+
+.homeBox{
+    height: 100vh;
+}
+.boxWrapper{
+   
+    display: flex;
+    width: 100vw0px;
+    justify-content: space-around;
+    position: relative;
+    bottom: 0;
+}
+
+
+.box{
+    margin: 20px;
+    width: 30vw;
+    height: 200px;
+    border: 2px groove darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

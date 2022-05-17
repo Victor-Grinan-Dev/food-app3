@@ -1,9 +1,9 @@
 import React from 'react';
 import css from './navbar.module.css';
-import '../../App.css';
+
 import logo from '../assets/images/meLogo.png';
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (

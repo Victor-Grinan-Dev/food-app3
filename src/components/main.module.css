@@ -1,7 +1,6 @@
 
 .main{
     width: 100vw;
-    height: 100vh;
-    position: relative
-    
+    max-height: 100vh;
+    position: relative;
 }

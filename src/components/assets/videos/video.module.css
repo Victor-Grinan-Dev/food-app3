@@ -1,14 +1,14 @@
 
 .video-container{
     position: relative;
+    width: 600px;
+    height: 300px;
   }
   
 .video{
-    position: relative;
-    width: 100vw;
+    width: 100%;
     filter: saturate(0);
-    background-repeat: none;
-    
+    object-fit: cover;
 }
 
 .title{
