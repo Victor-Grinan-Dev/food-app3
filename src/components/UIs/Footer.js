@@ -1,9 +1,7 @@
 import React from 'react';
 import css from './footer.module.css';
-import Linkedin from '../assets/images/linkedin-white-border.png';
 import Insta from '../assets/images/insta-white-border.png';
-import Github from '../assets/images/github-white-border.png';
-import Twitter from '../assets/images/twitter-white-border.png';
+
 
 
 

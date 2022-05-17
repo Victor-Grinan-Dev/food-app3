@@ -1,15 +1,22 @@
 import React from 'react';
-import Video from '../assets/videos/Video';
+import video from '../assets/videos/video.mp4';
 import css from './home.module.css';
-import { Link } from 'react-router-dom';
+
 function Home() {
   return (
     <div className={css.homeBox}>
-        <Video/>
-        <div className={css.boxWrapper}>
-          <Link to='/add'><div className={css.box}> Add recipe </div></Link>
-          <Link to='/browse' ><div className={css.box}> Browse </div></Link>
-          <Link to='/about' > <div className={css.box}> About </div></Link>       
+        <div className={css.videoContainer}>
+            <video
+                autoPlay
+                muted
+                loop
+                className={css.video}
+                src={video}
+                type='video/mp4'
+            />
+
+            <h1 className={css.title}>"Feel it, Cook it"</h1>
+            <p className={css.slogan}> "A site for your favorite food" </p>
         </div>
     </div>
   )

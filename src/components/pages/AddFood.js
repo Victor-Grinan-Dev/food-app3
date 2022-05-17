@@ -56,7 +56,7 @@ const AddFood = () => {
 
   // After we have all data collected from inputs, we post the Data object from state.
   const submitData = (e) => {
-    axios.post('http://localhost:3001/recipies', data);
+    axios.post('http://localhost:3001/database', data);
   };
 
   return (
@@ -97,7 +97,7 @@ const AddFood = () => {
                 type="text"
                 name="quantity"
                 id="quantity"
-                onChange={(e) => changeIncData(e, i)}
+                onChange={(e) => changeIngData(e, i)}
               />
             </div>
             <div>
@@ -106,7 +106,7 @@ const AddFood = () => {
                 type="text"
                 name="incName"
                 id="incName"
-                onChange={(e) => changeIncData(e, i)}
+                onChange={(e) => changeIngData(e, i)}
               />
             </div>
           </div>
