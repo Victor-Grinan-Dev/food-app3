@@ -9,8 +9,9 @@ const FoodSingle = () => {
   return (
     <div>
       <h1>{recipe.name}</h1>
-      <img src={recipe.img} alt={recipe.name} />
+      <img src={recipe.image} alt={recipe.name} />
       <img src={country.flag} alt={country.name} />
+      <p>{recipe.instruction}</p>
     </div>
   );
 };
