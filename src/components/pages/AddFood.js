@@ -35,10 +35,10 @@ const AddFood = () => {
   // Bit more complicated event handler for getting data from ingredients. First, we spread the current ingredients state and then look for that specific object in the array. We use the index, which is passed to the event handler. After updating the value in inputs, we will overwrite the Data state and add the ingredients array.
   const changeIngData = (e, i) => {
     const { name, value } = e.target;
-    const incList = [...ingredients];
-    incList[i][name] = value;
-    setIngredients(incList);
-    setData({ ...data, inc: ingredients });
+    const ingredients = [...ingredients];
+    ingredients[i][name] = value;
+    setIngredients(ingredients);
+    setData({ ...data, ingredients: ingredients });
   };
 
   // This event handler is reacting to our select event handler. We get the value from select, and then we find the correct alpha2Code. After that, we save valid code to the Data state.
