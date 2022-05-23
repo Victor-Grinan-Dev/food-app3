@@ -8,26 +8,22 @@ const AddFood = () => {
     description: '',
     country: '',
     imgen: '',
-    ingredient: [],
+    ingredients: [],
     inst: '',
   });
 
-  // Ingredients as a separated state which contains one object by default. When adding new ingredients, the array will have more objects.
   const [ingredients, setIngredients] = useState([
     { id: 1, ingredient: '', quantity: '' },
   ]);
 
-  // countries state is for saving data from restcountries API
   const [countries, setCountries] = useState([]);
 
-  // Getting data for all 250 countries
   useEffect(() => {
     axios.get('https://restcountries.com/v2/all').then((res) => {
       setCountries(res.data);
     });
   }, []);
 
-  // basic onChange event for regular inputs
   const changeData = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
