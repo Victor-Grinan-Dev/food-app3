@@ -1,0 +1,30 @@
+.singleFood{
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer{
+    width: 50vw;
+    height: 90vh;
+}
+
+.image{
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dataContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.dataHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.flag{
+    width: 50px;
+    height: 50px;
+}
