@@ -1,27 +1,5 @@
-.nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100vw;
-  background-color: rgb(0, 0, 0);
-  color: beige;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+*{
+  margin: 0;
 }
 
-a{
-  text-decoration: none;
-  color: beige;
-  margin-right: 20px;
-}
-.logo{
-  margin-right: 10px;
-}
-
-.logo img{
-  width: 100px;
-  margin-left: 50px;
-}
 

@@ -5,6 +5,7 @@ import css from './card.module.css';
 const Card = ({ name, description, image, data, country }) => {
   return (
     <div className={css.cardBox}>
+      
       <div className={css.cardHeader}>
         <h2 className={css.name}>{name}</h2>
         <img src={country.flag} alt={country.name} className={css.flag}/>
