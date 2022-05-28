@@ -9,7 +9,7 @@ function Browse() {
   const [country, setCountry] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const getRecipes = () => axios.get('http://localhost:3001/database');
+  const getRecipes = () => axios.get('http://localhost:8001/database');
   const getCountries = () => axios.get('https://restcountries.com/v2/all');
 
   useEffect(() => {

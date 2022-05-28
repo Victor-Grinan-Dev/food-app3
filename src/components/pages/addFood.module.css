@@ -1,0 +1,9 @@
+.addFood{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input1{
+    width: 250px;
+}
