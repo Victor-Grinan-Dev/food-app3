@@ -1,12 +1,9 @@
-*{
-    margin: 0;
-}
+
 
 .homeBox{
-    height: 100vh;
+    height: 80vh;
 }
-.boxWrapper{
-   
+.boxWrapper{ 
     display: flex;
     width: 100vw0px;
     justify-content: space-around;
@@ -28,12 +25,14 @@
 
 .video-container{
     position: relative;
-    width: 600px;
-    height: 300px;
+    width:100vw;
+    height: 80vh;
+    object-fit: cover;
   }
   
 .video{
     width: 100%;
+    max-height: 88vh;
     filter: saturate(0);
     object-fit: cover;
 }

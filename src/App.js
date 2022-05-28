@@ -4,7 +4,7 @@ import Home from './components/pages/Home';
 import AddFood from './components/pages/AddFood';
 import Browse from './components/pages/Browse';
 import FoodSingle from './components/pages/FoodSingle';
-import Footer from './components/UIs/Footer';
+//import Footer from './components/UIs/Footer';
 import logo from './components/assets/images/meLogo.png'
 import css from './App.module.css'
 
@@ -25,7 +25,7 @@ const App = () => {
         <Route path="add" element={<AddFood />} />
         <Route path="browse/:single" element={<FoodSingle />} />
       </Routes>
-      <Footer/>
+
     </BrowserRouter>
   );
 };
