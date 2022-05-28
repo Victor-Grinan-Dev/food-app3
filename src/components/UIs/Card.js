@@ -9,6 +9,7 @@ const Card = ({ name, description, image, data, country }) => {
         <h2 className={css.name}>{name}</h2>
         <img src={country.flag} alt={country.name} className={css.flag}/>
       </div>
+      
       <div className={css.imageContainer}>
         <img src={image} alt={name} className={css.image}/>     
       </div>
