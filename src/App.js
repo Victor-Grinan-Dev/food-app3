@@ -5,9 +5,8 @@ import AddFood from './components/pages/AddFood';
 import Browse from './components/pages/Browse';
 import FoodSingle from './components/pages/FoodSingle';
 import About from './components/pages/About';
-//import Footer from './components/UIs/Footer';
 import Navbar from './components/UIs/Navbar';
-import css from './App.module.css'
+
 
 const App = () => {
   return (
@@ -16,7 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="browse" element={<Browse />} />
-        <Route path="about" element={<AddFood />} />
+        <Route path="about" element={<About />} />
         <Route path="add" element={<AddFood />} />
         <Route path="browse/:single" element={<FoodSingle />} />
       </Routes>
