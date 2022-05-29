@@ -4,6 +4,9 @@ import axios from 'axios';
 import Card from '../UIs/Card';
 import css from './browse.module.css'
 
+const databaseAPI = 'http://localhost:8001/database';
+const countriesAPI = 'https://restcountries.com/v2/all'
+
 function Browse() {
   const [recipes, setRecipes] = useState([]);
   const [country, setCountry] = useState([]);
@@ -20,8 +23,8 @@ function Browse() {
     //console.log(search); 
     };
 
-  const getRecipes = () => axios.get('http://localhost:8001/database');
-  const getCountries = () => axios.get('https://restcountries.com/v2/all');
+  const getRecipes = () => axios.get(databaseAPI);
+  const getCountries = () => axios.get(countriesAPI);
 
   useEffect(() => {
     setLoading(true);

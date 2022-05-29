@@ -43,7 +43,7 @@ function AddFood() {
   };
 
   const submitData = (e) => {
-    
+
     axios.post(DB_API, data);
     setData({
       name: '',
