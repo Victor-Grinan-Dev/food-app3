@@ -5,6 +5,8 @@ function AddFood() {
 
   const DB_API = 'http://localhost:3001/database';
   const COUNTRIES_API = 'https://restcountries.com/v2/all';
+  const img_id = '4_jhDO54BYg';
+  const unsplashStructure = `https://source.unsplash.com/${img_id}/w=600`;
 
   const [data, setData] = useState({
     name: '',
@@ -57,74 +59,82 @@ function AddFood() {
 
   return (
     <div className={css.addFood}>
-      <form onSubmit={submitData}>
+      
+      <form >
+      <h2>Add a new recipe: </h2>
         <table>
-          <tr>
-            <td><label htmlFor="name">Name</label></td>
-            <td><input type="text" name="name" id="name" onChange={changeData} className={css.input1}/></td>
-          </tr>
+          
+          <tbody>
+            <tr>
+              <td><label htmlFor="name">Name</label></td>
+              <td><input type="text" name="name" id="name" onChange={changeData} className={css.input1}/></td>
+            </tr>
 
-          <tr>
-            <td><label htmlFor="author">Author</label></td>
-            <td><input type="text" name="author" id="author" onChange={changeData} className={css.input1} /></td>
-          </tr>
+            <tr>
+              <td><label htmlFor="author">Author</label></td>
+              <td><input type="text" name="author" id="author" onChange={changeData} className={css.input1} /></td>
+            </tr>
 
-          <tr>
-            <td><label htmlFor="desc">Description</label></td>
-            <td><textarea type="text" name="desc" id="desc" onChange={changeData} className={css.input1} /></td>
-          </tr>
+            <tr>
+              <td><label htmlFor="desc">Description</label></td>
+              <td><textarea type="text" name="desc" id="desc" onChange={changeData} className={css.input1} /></td>
+            </tr>
 
-          <tr>
-            <td><label htmlFor="countryCode">Origin Country :</label></td>
+            <tr>
+              <td><label htmlFor="countryCode">Origin Country :</label></td>
 
-            <td><select name="country_code" id="countryCode" onChange={changeCountry} className={css.input1}>
-            {countries.map((c) => (
-              <option key={c.name}>{c.name}</option>
-            ))}
-            </select>
-            </td>
+              <td><select name="country_code" id="countryCode" onChange={changeCountry} className={css.input1}>
+              {countries.map((c) => (
+                <option key={c.name}>{c.name}</option>
+              ))}
+              </select>
+              </td>
+            </tr>
 
-          </tr>
+            <tr>
+              <td><label htmlFor="img">Image url</label></td>
+              <td><input type="url" name="img" id="img" onChange={changeData} className={css.input1} /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>'https://source.unsplash.com/img_id'</td>
+            </tr>
+            <tr>
+              <td><p>Ingredients</p></td>         
+              <td>{ingredients.map((_, i) => {
+                    return (
+                      <div key={i}>
 
-          <tr>
-            <td><label htmlFor="img">Image url</label></td>
-            <td><input type="url" name="img" id="img" onChange={changeData} className={css.input1} /></td>
-          </tr>
-              
-          <tr>
-            <td><p>Ingredients</p></td>         
-            <td>{ingredients.map((_, i) => {
-                  return (
-                    <div key={i}>
+                        
 
-                      <table>
+                          
+                            <label htmlFor="ingredient">Ingredient </label>
+                            <input type="text" name="ingredient" id="ingredient" onChange={(e) => changeIngredient(e, i)} className={css.input2} />
+                            <br></br>
+                
+                          
+                            <label htmlFor="quantity">Quantity </label>
+                            <input type="text" name="quantity" id="quantity" onChange={(e) => changeIngredient(e, i)} className={css.input2} />
+                          
+                        
 
-                        <tr>
-                          <td><label htmlFor="ingredient">Ingredient</label></td>
-                          <td><input type="text" name="ingredient" id="ingredient" onChange={(e) => changeIngredient(e, i)} className={css.input2} /></td>
-                        </tr>
-              
-                        <tr>
-                          <td><label htmlFor="quantity">Quantity</label></td>
-                          <td><input type="text" name="quantity" id="quantity" onChange={(e) => changeIngredient(e, i)} className={css.input2} /></td>
-                        </tr>
-                      </table>
+                      </div>
+                    );
+              })}
+              <button onClick={addIngrdient}>Add ingredient</button></td>
+            </tr>
 
-                    </div>
-                  );
-            })}
-            <button onClick={addIngrdient}>Add ingredient</button></td>
-          </tr>
+            <tr>
+              <td><label htmlFor="inst">Instructions</label></td>
+              <td><textarea type="text" name="inst" id="inst" onChange={changeData} className={css.input1} /></td>
+            </tr>
 
-          <tr>
-            <td><label htmlFor="inst">Instructions</label></td>
-            <td><textarea type="text" name="inst" id="inst" onChange={changeData} className={css.input1} /></td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td><input type="submit" value="Submit"/></td>
-          </tr>
+            <tr>
+              <td></td>
+              <td><input type="submit" value="Submit" onClick={submitData} /></td>
+            </tr>
+          </tbody>
+          
 
         </table>
       </form>
