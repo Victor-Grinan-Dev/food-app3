@@ -111,7 +111,7 @@ function AddFood() {
             </tr>
             <tr>
               <td></td>
-              <td>'https://source.unsplash.com/img_id'</td>
+              <td>https://source.unsplash.com/[img_id]</td>
             </tr>
             <tr>
               <td><p>Ingredients</p></td>         

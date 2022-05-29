@@ -19,11 +19,15 @@ const FoodSingle = () => {
           <h2 className={css.foodName}>"{recipe.name}"</h2>
           <img src={country.flag} alt={country.name}  className={css.flag} />
         </div>
+        <h3>Ingredients:</h3>
         <ul>
         { 
-          console.log()
+          recipe.ingredients.map((item) => (
+            <li>{item.ingredient} - {item.quantity} </li>
+          ))
         }
         </ul>
+        <br/>
         <p>{recipe.instruction}</p>
       </div>
     </div>
