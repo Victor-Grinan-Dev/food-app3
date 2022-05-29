@@ -90,7 +90,7 @@
     {
       "name": "Slipery cucumber",
       "author": "victor",
-      "description": "This is ver global recipe",
+      "description": "This is very global recipe",
       "ingredients": [
         {
           "id": 1,
@@ -107,6 +107,60 @@
       "image": "https://source.unsplash.com/-YHSwy6uqvk/640x360/",
       "id": 3,
       "country_code": "EE"
+    },
+    {
+      "name": "Fresh vegetables",
+      "author": "victor Grinan",
+      "description": "all the veggies in a bowl",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "all vegies you find",
+          "quantity": "1"
+        }
+      ],
+      "instruction": "cut them in cubes an put them in bowls",
+      "image": "https://source.unsplash.com/4_jhDO54BYg",
+      "country_code": "FI",
+      "id": 5
+    },
+    {
+      "name": "weird salaaaatti",
+      "author": "victor Grinan",
+      "description": "a salad that is just weird",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "all veggies",
+          "quantity": "1"
+        },
+        {
+          "id": 2,
+          "ingredient": "more veggies ",
+          "quantity": "1"
+        }
+      ],
+      "instruction": "put them  in a plate sliced",
+      "image": "",
+      "country_code": "CU",
+      "id": 6
+    },
+    {
+      "name": "another weird salad",
+      "author": "victor Grinan",
+      "description": "qwertyu",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "cucumber",
+          "quantity": "1"
+        }
+      ],
+      "instruction": "poiuytrew",
+      "image": "'https://source.unsplash.com/Ww8eQWjMJWk",
+      "country_code": "UM",
+      "id": 7
     }
+
   ]
 }

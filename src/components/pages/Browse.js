@@ -7,7 +7,18 @@ import css from './browse.module.css'
 function Browse() {
   const [recipes, setRecipes] = useState([]);
   const [country, setCountry] = useState([]);
+  const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const recipesFilter = recipes.filter((res) => {
+    res.name = res.name.toLowerCase()
+    return res.name.includes(search.toLowerCase());
+  });
+
+  const searchHandler = (e) => {
+    setSearch(e.target.value);
+    //console.log(search); 
+    };
 
   const getRecipes = () => axios.get('http://localhost:8001/database');
   const getCountries = () => axios.get('https://restcountries.com/v2/all');
@@ -30,17 +41,26 @@ function Browse() {
 
   return (
     <div className={css.browse}>
-      {recipes.map((recipe) => (
-        <Card
-          key={recipe.id}
-          name={recipe.id}
-          data={recipe}
-          country={country.find(
-            (country) => country.alpha2Code === recipe.country_code
-          )}
-          {...recipe}
-        />
-      ))}
+
+      <div className={css.search}>
+        <label> Search </label>
+        <input type="text" placeholder="🔍" onChange={searchHandler} />
+      </div>
+    
+      <div className={css.showCards}>
+        {recipesFilter.map((recipe) => (
+          <Card
+            key={recipe.id}
+            name={recipe.id}
+            data={recipe}
+            country={country.find(
+              (country) => country.alpha2Code === recipe.country_code
+            )}
+            {...recipe}
+          />
+        ))}
+      </div>
+
     </div>
   );
 };

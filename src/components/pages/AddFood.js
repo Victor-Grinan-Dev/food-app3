@@ -3,10 +3,11 @@ import axios from 'axios';
 import css from './addFood.module.css';
 function AddFood() {
 
-  const DB_API = 'http://localhost:3001/database';
+  const DB_API = 'http://localhost:8001/database';
   const COUNTRIES_API = 'https://restcountries.com/v2/all';
-  const img_id = '4_jhDO54BYg';
-  const unsplashStructure = `https://source.unsplash.com/${img_id}/w=600`;
+  //'https://restcountries.com/v3.1/all'
+  //'https://restcountries.com/v2/all';
+
 
   const [data, setData] = useState({
     name: '',
@@ -18,14 +19,16 @@ function AddFood() {
     country_code: '',
   });
 
+
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    axios.get(COUNTRIES_API).then((res) => {
-      setCountries(res.data);
+    axios.get(COUNTRIES_API).then((response) => {
+      setCountries(response.data);
     });
   }, []);
 
+  //console.log(countries)
   const [ingredients, setIngredients] = useState([
       { id: 1, ingredient: '', quantity: '' },
     ]);
@@ -35,12 +38,22 @@ function AddFood() {
   }
   const changeCountry = (e) => {
     const country = countries.find((item) => item.name === e.target.value);
-    setData({ ...data, country_code: country.alpha3Code });
+    console.log(country.alpha2Code)
+    setData({ ...data, country_code: country.alpha2Code });
   };
 
   const submitData = (e) => {
-    e.preventDefault();
+    
     axios.post(DB_API, data);
+    setData({
+      name: '',
+      author: '',
+      description: '',
+      ingredients: [],
+      instruction: '',
+      image: '',
+      country_code: '',
+    })
   };
 
   const changeIngredient = (e, i) => {
@@ -53,14 +66,14 @@ function AddFood() {
 
   const addIngrdient = (e) => {
     e.preventDefault();
-    const newIngredient = { id: ingredients.length + 1, incName: '', quantity: '' };
+    const newIngredient = { id: ingredients.length + 1, ingredient: '', quantity: '' };
     setIngredients([...ingredients, newIngredient])
   }
 
   return (
     <div className={css.addFood}>
       
-      <form >
+      <form>
       <h2>Add a new recipe: </h2>
         <table>
           
@@ -77,15 +90,16 @@ function AddFood() {
 
             <tr>
               <td><label htmlFor="desc">Description</label></td>
-              <td><textarea type="text" name="desc" id="desc" onChange={changeData} className={css.input1} /></td>
+              <td><textarea type="text" name="description" id="description" onChange={changeData} className={css.input1} /></td>
             </tr>
 
             <tr>
               <td><label htmlFor="countryCode">Origin Country :</label></td>
 
-              <td><select name="country_code" id="countryCode" onChange={changeCountry} className={css.input1}>
-              {countries.map((c) => (
-                <option key={c.name}>{c.name}</option>
+              <td><select name="country_code" id="country_code" onChange={changeCountry} className={css.input1} defaultValue='Select a Country'>
+              <option hidden disabled value> Select a country... </option>
+              {countries.map((country) => (
+                <option key={country.name}>{country.name}</option>
               ))}
               </select>
               </td>
@@ -93,7 +107,7 @@ function AddFood() {
 
             <tr>
               <td><label htmlFor="img">Image url</label></td>
-              <td><input type="url" name="img" id="img" onChange={changeData} className={css.input1} /></td>
+              <td><input type="url" name="image" id="image" onChange={changeData} className={css.input1} /></td>
             </tr>
             <tr>
               <td></td>
@@ -126,12 +140,12 @@ function AddFood() {
 
             <tr>
               <td><label htmlFor="inst">Instructions</label></td>
-              <td><textarea type="text" name="inst" id="inst" onChange={changeData} className={css.input1} /></td>
+              <td><textarea type="text" name="instruction" id="instruction" onChange={changeData} className={css.input1} /></td>
             </tr>
 
             <tr>
               <td></td>
-              <td><input type="submit" value="Submit" onClick={submitData} /></td>
+              <td><input type="submit" value="Submit" onClick={submitData}/></td>
             </tr>
           </tbody>
           
