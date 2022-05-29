@@ -141,7 +141,7 @@
         }
       ],
       "instruction": "put them  in a plate sliced",
-      "image": "",
+      "image": "https://source.unsplash.com/fdlZBWIP0aM",
       "country_code": "CU",
       "id": 6
     },
@@ -157,7 +157,7 @@
         }
       ],
       "instruction": "poiuytrew",
-      "image": "'https://source.unsplash.com/Ww8eQWjMJWk",
+      "image": "https://source.unsplash.com/Ww8eQWjMJWk",
       "country_code": "UM",
       "id": 7
     },
@@ -173,7 +173,7 @@
         }
       ],
       "instruction": "did it work?",
-      "image": "'https://source.unsplash.com/fdlZBWIP0aM",
+      "image": "https://source.unsplash.com/fdlZBWIP0aM",
       "country_code": "FI",
       "id": 8
     }
