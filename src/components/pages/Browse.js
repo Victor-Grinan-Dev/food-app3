@@ -19,8 +19,7 @@ function Browse() {
   });
 
   const searchHandler = (e) => {
-    setSearch(e.target.value);
-    //console.log(search); 
+    setSearch(e.target.value); 
     };
 
   const getRecipes = () => axios.get(databaseAPI);

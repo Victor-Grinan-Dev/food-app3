@@ -259,6 +259,70 @@
       "image": "https://source.unsplash.com/500x400/?burger",
       "country_code": "FI",
       "id": 11
+    },
+    {
+      "name": "Pizza",
+      "author": "Italian chef 1",
+      "description": "if you have not eaten pizza you havent been happy.",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "pizza",
+          "quantity": "1"
+        }
+      ],
+      "instruction": "get it frozen from LIDL ",
+      "image": "https://source.unsplash.com/500x400/?Pizza",
+      "country_code": "IT",
+      "id": 12
+    },
+    {
+      "name": "spagetti",
+      "author": "Italian chef 1",
+      "description": "sdfghjk",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "all veggies",
+          "quantity": "1 ounce"
+        }
+      ],
+      "instruction": "ytfcbh",
+      "image": "https://source.unsplash.com/500x400/?spagetti",
+      "country_code": "IT",
+      "id": 19
+    },
+    {
+      "name": "mash potatoes",
+      "author": "unknown",
+      "description": "qwertyuiiuytrewqwertyuiuytrew",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "potatoes",
+          "quantity": "1kg"
+        }
+      ],
+      "instruction": "tfcvbnhgfcvbnhgfcvbnhgfc",
+      "image": "https://source.unsplash.com/500x400/?mash-potatoes",
+      "country_code": "PH",
+      "id": 20
+    },
+    {
+      "name": "Fried fish",
+      "author": "Victor Grinan",
+      "description": "Klkjfdsaqwertyuio",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "fish",
+          "quantity": "oil"
+        }
+      ],
+      "instruction": "Heat the oil  and drop the fish in it",
+      "image": "https://source.unsplash.com/500x400/?Fired-fish",
+      "country_code": "BB",
+      "id": 21
     }
   ]
 }
