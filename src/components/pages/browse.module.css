@@ -5,7 +5,9 @@
     align-items: center;
     justify-content: center;
 }
-
+.search{
+    margin-top: 20px;
+}
 .showCards{
     display: flex;
     flex-wrap: wrap;

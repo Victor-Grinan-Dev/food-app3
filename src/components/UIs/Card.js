@@ -15,7 +15,9 @@ const Card = ({ name, description, image, data, country }) => {
       </div>
       
       <div className={css.imageContainer}>
-        <img src={image} alt={name} className={css.image}/>     
+        <Link to={name} state={{ data: data, country: country }}>
+          <img src={image} alt={name} className={css.image}/> 
+        </Link>         
       </div>
       
       <p className={css.description}>{capitalStart(description)}</p>

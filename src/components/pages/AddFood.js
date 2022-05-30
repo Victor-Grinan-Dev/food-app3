@@ -16,7 +16,7 @@ function AddFood() {
     instruction: '',
     image: '',
     country_code: '',
-  }
+  } 
 
   const [data, setData] = useState(emptyState);
 
@@ -43,7 +43,7 @@ function AddFood() {
     const head_api = 'https://source.unsplash.com/';
 
     if ((e.target.value.indexOf(head_api) == -1)){
-      const randomPic = RANDOM_IMG_API + e.target.value;
+      const randomPic = RANDOM_IMG_API + e.target.value + '-food';
       setData({ ...data, [e.target.name]: randomPic }); 
     } else {
       setData({ ...data, [e.target.name]: e.target.value });
@@ -60,9 +60,7 @@ function AddFood() {
     if (!data.image || data.image === ""){
       const endPoint = data.name.split(' ').join('-')
       const randomPic = RANDOM_IMG_API + endPoint;
-      console.log('no image, ', randomPic )
       setData(data.image = randomPic)
-      console.log(data.image)
     }
     axios.post(DB_API, data);
     setData(emptyState);
@@ -101,11 +99,11 @@ function AddFood() {
               <td><input type="text" name="author" id="author" onChange={changeData} className={css.input1} /></td>
             </tr>
             <tr>
-              <td><label htmlFor="desc">Description</label></td>
+              <td><label htmlFor="description">Description</label></td>
               <td><textarea type="text" name="description" id="description" onChange={changeData} className={css.input1} /></td>
             </tr>
             <tr>
-              <td><label htmlFor="countryCode">Origin Country :</label></td>
+              <td><label htmlFor="country_code">Origin Country :</label></td>
               <td><select name="country_code" id="country_code" onChange={changeCountry} className={css.input1} defaultValue='Select a Country'>
               <option hidden disabled value> Select a country... </option>
               {countries.map((country) => (
@@ -116,7 +114,7 @@ function AddFood() {
             </tr>
             
             <tr>
-              <td><label htmlFor="img">Image url <br/> or image name <br/> to search: </label></td>
+              <td><label htmlFor="image">Image url <br/> or image name <br/> to search: </label></td>
               <td><input type="text" name="image" id="image" onChange={chanImage} className={css.input1} /></td>
             </tr>
             <tr>
@@ -142,7 +140,7 @@ function AddFood() {
             </tr>
             
             <tr>
-              <td><label htmlFor="inst">Instructions</label></td>
+              <td><label htmlFor="instruction">Instructions</label></td>
               <td><textarea type="text" name="instruction" id="instruction" onChange={changeData} className={css.input1} /></td>
             </tr>
             <tr>
