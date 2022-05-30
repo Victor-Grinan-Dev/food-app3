@@ -1,12 +1,11 @@
 import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import css from './foodSingle.module.css'
 
 const FoodSingle = () => {
   const location = useLocation();
   const recipe = location.state.data;
   const country = location.state.country;
-  const ingredients = location.state.ingredients
 
   return (
     <div className={css.singleFood}>

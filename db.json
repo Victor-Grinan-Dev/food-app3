@@ -176,6 +176,89 @@
       "image": "https://source.unsplash.com/fdlZBWIP0aM",
       "country_code": "FI",
       "id": 8
+    },
+    {
+      "name": "Cuba Libre",
+      "author": "unknown",
+      "description": "A traditional way to mix rum an coke.",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "rum",
+          "quantity": "1 ounce"
+        },
+        {
+          "id": 2,
+          "ingredient": " Coca-Cola",
+          "quantity": "3 ounces"
+        },
+        {
+          "id": 3,
+          "ingredient": "lime wedge",
+          "quantity": "Garnish"
+        }
+      ],
+      "instruction": "1-Fill a highball glass with ice, then add rum and Coca-Cola.\n\nGarnish with a lime wedge. 2-Squeeze the lime into your drink, if desired.",
+      "image": "https://source.unsplash.com/dmkmrNptMpw",
+      "country_code": "CU",
+      "id": 9
+    },
+    {
+      "name": "Mojito",
+      "author": "unknown",
+      "description": "This Cuban cocktail is a blend of a few simple ingredients, but the resulting drink is the perfect balance of sweet and tart, not to mention refreshing!",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "fresh mint leaves",
+          "quantity": "10 "
+        },
+        {
+          "id": 2,
+          "ingredient": "lime",
+          "quantity": "½ medium "
+        },
+        {
+          "id": 3,
+          "ingredient": "white sugar",
+          "quantity": "2 tablespoons "
+        },
+        {
+          "id": 4,
+          "ingredient": "ice cubes",
+          "quantity": "1 cup"
+        },
+        {
+          "id": 5,
+          "ingredient": "white rum",
+          "quantity": "1 ½ fluid ounces "
+        },
+        {
+          "id": 6,
+          "ingredient": "club soda",
+          "quantity": "½ cup "
+        }
+      ],
+      "instruction": "Step 1\nPlace mint leaves and 1 lime wedge into a sturdy glass. Use a muddler and crush to release mint oils and lime juice.\n\nStep 2\nAdd remaining lime wedges and 2 tablespoons sugar, and muddle again to release the lime juice. Do not strain the mixture.\n\nStep 3\nFill the glass almost to the top with ice. Pour in rum and fill the glass with club soda.\n\nStep 4\nStir, taste, and add more sugar if desired.",
+      "image": "https://source.unsplash.com/gtDYwUIr9Vg",
+      "country_code": "CU",
+      "id": 10
+    },
+    {
+      "name": "burger",
+      "author": "burgeri mies",
+      "description": "wertyuioiuytrew",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "burger",
+          "quantity": "1"
+        }
+      ],
+      "instruction": "poiuytrewwertykhgfdsdnm",
+      "image": "https://source.unsplash.com/500x400/?burger",
+      "country_code": "FI",
+      "id": 11
     }
   ]
 }

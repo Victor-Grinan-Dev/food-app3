@@ -5,8 +5,7 @@ function AddFood() {
 
   const DB_API = 'http://localhost:8001/database';
   const COUNTRIES_API = 'https://restcountries.com/v2/all';
-  //'https://restcountries.com/v3.1/all'
-  //'https://restcountries.com/v2/all';
+  const RANDOM_IMG_API = 'https://source.unsplash.com/500x400/?'; //concat this to a name
 
 
   const [data, setData] = useState({
@@ -28,7 +27,6 @@ function AddFood() {
     });
   }, []);
 
-  //console.log(countries)
   const [ingredients, setIngredients] = useState([
       { id: 1, ingredient: '', quantity: '' },
     ]);
@@ -36,6 +34,19 @@ function AddFood() {
   const changeData = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   }
+
+  const chanImage = (e) => {
+    e.preventDefault()
+    const head_api = 'https://source.unsplash.com/';
+
+    if ((e.target.value.indexOf(head_api) == -1)){//does not contain the api head
+      const randomPic = RANDOM_IMG_API + e.target.value;
+      setData({ ...data, [e.target.name]: randomPic }); 
+    } else {
+      setData({ ...data, [e.target.name]: e.target.value });
+    } 
+  }
+
   const changeCountry = (e) => {
     const country = countries.find((item) => item.name === e.target.value);
     console.log(country.alpha2Code)
@@ -43,7 +54,7 @@ function AddFood() {
   };
 
   const submitData = (e) => {
-
+    //if the url data still empty change it for the name
     axios.post(DB_API, data);
     setData({
       name: '',
@@ -74,7 +85,9 @@ function AddFood() {
     <div className={css.addFood}>
       
       <form>
+      <br/>
       <h2>Add a new recipe: </h2>
+      <br/>
         <table>
           
           <tbody>
@@ -104,40 +117,35 @@ function AddFood() {
               </select>
               </td>
             </tr>
-
+            <br/>
             <tr>
-              <td><label htmlFor="img">Image url</label></td>
-              <td><input type="url" name="image" id="image" onChange={changeData} className={css.input1} /></td>
+              <td><label htmlFor="img">Image url <br/> or image name <br/> to search: </label></td>
+              <td><input type="text" name="image" id="image" onChange={chanImage} className={css.input1} /></td>
             </tr>
             <tr>
               <td></td>
               <td>https://source.unsplash.com/[img_id]</td>
             </tr>
+            <br/>
             <tr>
               <td><p>Ingredients</p></td>         
               <td>{ingredients.map((_, i) => {
                     return (
                       <div key={i}>
 
-                        
-
-                          
                             <label htmlFor="ingredient">Ingredient </label>
                             <input type="text" name="ingredient" id="ingredient" onChange={(e) => changeIngredient(e, i)} className={css.input2} />
-                            <br></br>
-                
+                            <br></br>               
                           
                             <label htmlFor="quantity">Quantity </label>
                             <input type="text" name="quantity" id="quantity" onChange={(e) => changeIngredient(e, i)} className={css.input2} />
-                          
-                        
 
                       </div>
                     );
               })}
               <button onClick={addIngrdient}>Add ingredient</button></td>
             </tr>
-
+            <br/>
             <tr>
               <td><label htmlFor="inst">Instructions</label></td>
               <td><textarea type="text" name="instruction" id="instruction" onChange={changeData} className={css.input1} /></td>
