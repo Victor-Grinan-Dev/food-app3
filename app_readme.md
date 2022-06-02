@@ -1,9 +1,10 @@
 # FoodApp
 
-Food app i a class project for the react22k course
+Food app is a class project for the react22k course
 
 dependencies:
 - react framework
+- axios
 - json server (for local serve the db.json file)
   clone the repo, cd in it and type in terminal:
   ```shell
