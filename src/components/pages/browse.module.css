@@ -8,6 +8,11 @@
 .search{
     margin-top: 20px;
 }
+
+.searchImput{
+    line-height: 30px;
+}
+
 .showCards{
     display: flex;
     flex-wrap: wrap;
