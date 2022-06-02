@@ -14,3 +14,5 @@ dependencies:
   ```
   If you want to change the port that json server uses you can specify it in that last command.
   Just remember to change it also in ./src/components/pages/Browse.js line 7.
+
+  
