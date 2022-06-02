@@ -26,7 +26,6 @@
       "id": 1,
       "country_code": "EE"
     },
-    
     {
       "name": "Slipery cucumber",
       "author": "victor",
@@ -300,6 +299,27 @@
       "image": "https://source.unsplash.com/500x400/?plantain-food",
       "country_code": "CU",
       "id": 23
+    },
+    {
+      "name": "Fish n' ships",
+      "author": "Pekka haavisto",
+      "description": " very scandinavian/european way to eat fish and potatoes that apparently i never will unnderstand. but cause im in the area  as a guest i cant  give my opinion about it.",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "small fish",
+          "quantity": "many"
+        },
+        {
+          "id": 2,
+          "ingredient": "potatoes chips",
+          "quantity": "1 package from lidl"
+        }
+      ],
+      "instruction": "Fry the fish and put them on top of the chips",
+      "image": "https://source.unsplash.com/500x400/?Fish-n'-ships",
+      "country_code": "NO",
+      "id": 24
     }
   ]
 }

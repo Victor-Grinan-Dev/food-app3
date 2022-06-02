@@ -29,7 +29,7 @@ const FoodSingle = () => {
         }
         </ul>
         <br/>
-        <p >{capitalStart(recipe.instruction)}</p>
+        <p className={css.instructionText}>{capitalStart(recipe.instruction)}</p>
       </div>
     </div>
   );
