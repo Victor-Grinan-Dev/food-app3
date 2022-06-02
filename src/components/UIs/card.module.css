@@ -24,13 +24,14 @@
 
 .name{
     color: rgb(9, 8, 8);
-    margin-left: 5px;
+    margin: 10px;
 }
 .description{
+   
     min-height: 70px;
     max-height: 80px;
     color: rgb(17, 16, 16);
-    padding: 5px;
+    padding: 10px;
 }
 
 .imageContainer{
@@ -62,14 +63,15 @@
     width: 80px;
     height: 25px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 10px;
+    right: 10px;
     background-color: crimson;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     font-size: 12px;
+
 }
 a{
     color: beige;

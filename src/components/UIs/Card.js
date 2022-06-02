@@ -10,7 +10,7 @@ const Card = ({ name, description, image, data, country }) => {
     <div className={css.cardBox}>
       
       <div className={css.cardHeader}>
-        <h2 className={css.name}>{capitalStart(name)}</h2>
+        <h2 className={css.name}>{capitalStart(name)}:</h2>
         <img src={country.flag} alt={country.name} className={css.flag}/>
       </div>
       
