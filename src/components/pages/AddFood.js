@@ -16,7 +16,7 @@ function AddFood() {
     instruction: '',
     image: '',
     country_code: '',
-  } 
+  };
 
   const [data, setData] = useState(emptyState);
 
@@ -39,7 +39,6 @@ function AddFood() {
   };
 
   const chanImage = (e) => {
-    e.preventDefault()
     const head_api = 'https://source.unsplash.com/';
 
     if ((e.target.value.indexOf(head_api) == -1)){

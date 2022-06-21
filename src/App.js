@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import AddFood from './components/pages/AddFood';
 import Browse from './components/pages/Browse';
@@ -19,7 +19,6 @@ const App = () => {
         <Route path="add" element={<AddFood />} />
         <Route path="browse/:single" element={<FoodSingle />} />
       </Routes>
-
     </BrowserRouter>
   );
 };
