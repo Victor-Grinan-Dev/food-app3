@@ -8,7 +8,7 @@ function Navbar() {
     <div className={css.navContainer}>
 
       <div className={css.logo}>
-        <NavLink to='/'><img src={logo}/></NavLink> 
+        <NavLink to='/'><img src={logo} alt="logo"/></NavLink> 
       </div>
 
       <div className={css.navLinkContainer}>
@@ -18,7 +18,7 @@ function Navbar() {
         <NavLink to="/add">Add new recipe</NavLink>
         <a href="https://www.bc.fi/?gclid=Cj0KCQjwmuiTBhDoARIsAPiv6L957izCclO7mHzuc9Q4NksNezhLDQ4OZ9Xqjn5T-regQ-2zJDkA69UaAlLQEALw_wcB" target="blank">HBC</a>
         <a href="https://instagram.com/feelit_cookit?igshid=YmMyMTA2M2Y=" target="blank">
-            <img src={Insta} className={css.some}/>
+            <img src={Insta} className={css.some} alt="insta"/>
         </a>
       </div> 
     </div>
