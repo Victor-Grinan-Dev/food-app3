@@ -48,7 +48,7 @@ server.js
 - copy this in it:
 
   ```
-  web: node server.js
+  web: node? server.js
   ```
 
 - in the package.json file of your app change:
