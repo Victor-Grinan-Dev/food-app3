@@ -66,6 +66,7 @@ git remote show
 git add .
 git commit -m "awesome"
 git push heroku
+heroku open
 ```
 
 4- go to browser and find "open app" btn, press it.
