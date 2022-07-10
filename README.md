@@ -3,6 +3,7 @@
 Food app is a class project for the react22k course
 
 dependencies:
+
 - react framework
 - axios
 - json server (for local serve the db.json file)
@@ -19,72 +20,75 @@ dependencies:
 
 1- create an account in heroku https://signup.heroku.com/login
 
-  in dashboard right top corner:
-  create new app button
+in dashboard right top corner:
+create new app button
 
 2- install Heroku in your computer
 
+```shell
+brew tap heroku/brew && brew install heroku
+```
+
+3- install heroku in your app
+
+- create new file in the root of your repository called:
+
+```
+server.js
+```
+
+- copy this in it:
   ```shell
-  brew tap heroku/brew && brew install heroku
+  const jsonServer = require('json-server'); const server = jsonServer.create(); const router = jsonServer.router('./db.json'); const middlewares = jsonServer.defaults({ static: './build' }); const PORT = process.env.PORT || 8000; server.use(middlewares); server.use(jsonServer.rewriter({ '/api/\*': '/$1', })); server.use(router); server.listen(PORT, () => { console.log('Server is running'); });
+  ```
+- create new file in the root of your repository called: (notice - no extension)
+  ```
+  Procfile
+  ```
+- copy this in it:
+
+  ```
+  web: node server.js
   ```
 
-3- install heroku in your app 
-  - create new file in the root of your repository called: 
+- in the package.json file of your app change:
   ```
-  server.js
+  "start": "react-scripts start" => "start":"node server.js",
   ```
-  - copy this in it:
-    ```shell
-    const jsonServer = require('json-server'); const server = jsonServer.create(); const router = jsonServer.router('./db.json'); const middlewares = jsonServer.defaults({ static: './build' }); const PORT = process.env.PORT || 8000; server.use(middlewares); server.use(jsonServer.rewriter({ '/api/\*': '/$1', })) server.use(router); server.listen(PORT, () => { console.log('Server is running'); });
-    ```
-    
-  - create new file in the root of your repository called: (notice - no extension)
-    ```
-    Procfile 
-    ```
-  - copy this in it:
-    ```
-    web: node server.js
-    ```
-  
+- in IDE terminal: (you might get an error... is ok)
 
-  - in the package.json file of your app change:
-    ```
-    "start": "react-scripts start" => "start":"node server.js",
-    ```
-  - in IDE terminal: (you might get an error... is ok)
+```shell
+npm install -g heroku
+heroku --version
+heroku login
+heroku git:remote -a {your_app_name}
+git remote show
+git add .
+git commit -m "awesome"
+git push heroku
+```
 
-   ```shell
-   npm install -g heroku
-   heroku --version
-   heroku login
-   heroku git:remote -a {your_app_name}
-   git remote show
-   git add .
-   git commit -m "awesome"
-   git push heroku
-   ```
+4- go to browser and find "open app" btn, press it.
 
-4-  go to browser and find "open app" btn, press it.
-  - copy the url of the browser, that is your app url.
+- copy the url of the browser, that is your app url.
 
-5-  setup database
+5- setup database
 
-  5.a -  if you are using a database from react json-server:
-  
+5.a - if you are using a database from react json-server:
+
       ```
       change the end-point of your database url to "api/{your_database_end_point_name}" wherever your app is using it.
       ```
-      
-  5.b -  if you are using a database from mysql with symfony 
-  
+
+5.b - if you are using a database from mysql with symfony
+
       ```
       ????
       ```
-      
-  5.c -  if you are using a database external api remains unchanged.
 
-6-  remember save changes:
+5.c - if you are using a database external api remains unchanged.
+
+6- remember save changes:
 
     ```shell
     git add .
