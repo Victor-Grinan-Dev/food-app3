@@ -320,6 +320,27 @@
       "image": "https://source.unsplash.com/500x400/?Fish-n'-ships",
       "country_code": "NO",
       "id": 24
+    },
+    {
+      "name": "Avocado toast",
+      "author": "Burgeri mies",
+      "description": "A toast made of avocado",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "avocado",
+          "quantity": "1"
+        },
+        {
+          "id": 2,
+          "ingredient": "toast",
+          "quantity": "1"
+        }
+      ],
+      "instruction": "Spread the avocado over the toast ",
+      "image": "https://source.unsplash.com/500x400/?https://elavegan.com/de/wp-content/uploads/sites/5/2022/02/AvocadoToast-auf-Marmor-Hintergrund-mit-bunten-Toppings.jpg-food",
+      "country_code": "DE",
+      "id": 25
     }
   ]
 }

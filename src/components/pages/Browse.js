@@ -46,7 +46,7 @@ function Browse() {
 
       <div className={css.search}>
         <label> Search </label>
-        <input type="text" clasName={css.searchImput} placeholder="🔍" onChange={searchHandler} />
+        <input type="text" className={css.searchImput} placeholder="🔍" onChange={searchHandler} />
       </div>
     
       <div className={css.showCards}>
