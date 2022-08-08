@@ -7,7 +7,9 @@ dependencies:
 - react framework
 - axios
 - json server (for local serve the db.json file)
-  clone the repo, cd in it and type in terminal:
+
+ ## Use instructions
+ clone the repo, cd in it and type in terminal:
   ```shell
   npm install
   npm run local-start
