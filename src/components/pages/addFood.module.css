@@ -8,3 +8,18 @@
 .input1{
     width: 250px;
 }
+
+.spaced{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.ingredientsArea{
+    display: flex;
+    flex-direction: column;
+}
+.spacedIngredients{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

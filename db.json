@@ -341,6 +341,48 @@
       "image": "https://source.unsplash.com/500x400/?https://elavegan.com/de/wp-content/uploads/sites/5/2022/02/AvocadoToast-auf-Marmor-Hintergrund-mit-bunten-Toppings.jpg-food",
       "country_code": "DE",
       "id": 25
+    },
+    {
+      "name": "Cookies",
+      "author": "Machete",
+      "description": "Ereresfdz",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "azucar",
+          "quantity": "1"
+        },
+        {
+          "id": 2,
+          "ingredient": "chocolate",
+          "quantity": "4"
+        },
+        {
+          "id": 3,
+          "ingredient": "harina",
+          "quantity": "1"
+        }
+      ],
+      "instruction": "Vcfxbfxbfd",
+      "image": "https://source.unsplash.com/500x400/?Cookies",
+      "country_code": "BR",
+      "id": 26
+    },
+    {
+      "name": "Duro frio",
+      "author": "Unknown",
+      "description": "Fghjkkjfhdgsbfg",
+      "ingredients": [
+        {
+          "id": 1,
+          "ingredient": "any juice",
+          "quantity": "1 glass"
+        }
+      ],
+      "instruction": "Put the glass in the freezer with a stick or a spoon in it",
+      "image": "https://source.unsplash.com/500x400/?http://2.bp.blogspot.com/-5gukYjoGPcY/TwRyIqH_jjI/AAAAAAAAAV0/fbG-GYKZkaI/w1200-h630-p-k-no-nu/paletas-de-fresa.jpg-food",
+      "country_code": "CU",
+      "id": 27
     }
   ]
 }

@@ -86,85 +86,77 @@ function AddFood() {
       
       <h2>Add a new recipe: </h2>
       <br/>
-        <table>
-          
-          <tbody>
-            <tr>
-              <td><label htmlFor="name">Name</label></td>
-              <td><input type="text" name="name" id="name" onChange={changeData} className={css.input1}/></td>
-            </tr>
-            <tr>
-              <td><label htmlFor="author">Author</label></td>
-              <td><input type="text" name="author" id="author" onChange={changeData} className={css.input1} /></td>
-            </tr>
-            <tr>
-              <td><label htmlFor="description">Description</label></td>
-              <td><textarea type="text" name="description" id="description" onChange={changeData} className={css.input1} /></td>
-            </tr>
-            <tr>
-              <td><label htmlFor="country_code">Origin Country :</label></td>
-              <td><select name="country_code" id="country_code" onChange={changeCountry} className={css.input1} defaultValue='Select a Country'>
-              <option hidden disabled value> Select a country... </option>
-              {countries.map((country) => (
-                <option key={country.name}>{country.name}</option>
-              ))}
+
+          <div className={css.spaced}>
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" id="name" onChange={changeData} className={css.input1}/>
+          </div>
+
+          <div className={css.spaced}>
+              <label htmlFor="author">Author</label>
+              <input type="text" name="author" id="author" onChange={changeData} className={css.input1} />
+          </div>
+
+          <div className={css.spaced}>
+              <label htmlFor="description">Description</label>
+              <textarea type="text" name="description" id="description" onChange={changeData} className={css.input1} />
+          </div>
+           
+          <div className={css.spaced}>
+              <label htmlFor="country_code">Origin Country :</label>
+              <select name="country_code" id="country_code" onChange={changeCountry} className={css.input1} defaultValue='Select a Country'>
+                <option > Select a country... </option>
+                {countries.map((country) => (
+                  <option key={country.name}>{country.name}</option>
+                ))}
               </select>
-              </td>
-            </tr>
-            
-            <tr>
-              <td><label htmlFor="image">Image url <br/> or image name <br/> to search: </label></td>
-              <td><input type="text" name="image" id="image" onChange={chanImage} className={css.input1} /></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>https://source.unsplash.com/[img_id]</td>
-            </tr>
-            
-            <tr>
-              <td><p>Ingredients</p></td>         
-              <td>{ingredients.map((_, i) => {
+          </div>
+
+          <div className={css.spaced}>
+              <label htmlFor="image">Image url <br/> or image name <br/> to search: </label>
+             <input type="text" name="image" id="image" onChange={changeData} className={css.input1} />
+          </div>
+          
+             https://source.unsplash.com/[img_id]
+          
+          <div className={css.ingredientsArea}>             
+            <p>Ingredients</p>         
+              {ingredients.map((_, i) => {
                     return (
-                      <div key={i}>
+
+                      <div key={i} className={css.spacedIngredients}>
+                        <div className={css.spaced}>
                             <label htmlFor="ingredient">Ingredient </label>
                             <input type="text" name="ingredient" id="ingredient" onChange={(e) => changeIngredient(e, i)} className={css.input2} />
-                            <br></br>               
-                          
+                            <br></br>
+                        </div>
+                                       
+                        <div className={css.spaced}>
                             <label htmlFor="quantity">Quantity </label>
                             <input type="text" name="quantity" id="quantity" onChange={(e) => changeIngredient(e, i)} className={css.input2} />
+                        </div>
+   
                       </div>
                     );
               })}
-              <button onClick={addIngrdient}>Add ingredient</button></td>
-            </tr>
-            
-            <tr>
-              <td><label htmlFor="instruction">Instructions</label></td>
-              <td><textarea type="text" name="instruction" id="instruction" onChange={changeData} className={css.input1} /></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><input type="submit" value="Submit" onClick={submitData}/></td>
-            </tr>
-          </tbody>
+              <div>
+                <button onClick={addIngrdient}>Add ingredient</button>
+              </div>
+              
+            </div>
           
-        </table>
+            <div className={css.spaced}>
+              <label htmlFor="instruction">Instructions</label>
+              <textarea type="text" name="instruction" id="instruction" onChange={changeData} className={css.input1} />
+            </div>
+
+            <div className={css.spaced}>
+              <input type="submit" value="Submit" onClick={submitData}/>
+            </div>
+
       </form>
     </div>
   )
 }
 
 export default AddFood;
-
-//Database names
-/*
-name
-author
-description
-ingredients
-ingredient
-quantity
-instruction
-image
-country_code
-*/
