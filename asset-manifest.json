@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.26943865.css",
+    "main.js": "/static/js/main.95ff8699.js",
+    "static/media/video.mp4": "/static/media/video.2c9efb2103e81b4362be.mp4",
+    "static/media/insta-white-border.png": "/static/media/insta-white-border.a07194b4d435e78d8339.png",
+    "static/media/meLogo.png": "/static/media/meLogo.d0e0b44cc538f288eed6.png",
+    "index.html": "/index.html",
+    "main.26943865.css.map": "/static/css/main.26943865.css.map",
+    "main.95ff8699.js.map": "/static/js/main.95ff8699.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26943865.css",
+    "static/js/main.95ff8699.js"
+  ]
+}
