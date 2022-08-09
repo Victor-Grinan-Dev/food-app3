@@ -8,13 +8,86 @@ dependencies:
 - axios
 - json server (for local serve the db.json file)
   clone the repo, cd in it and type in terminal:
+
   ```shell
   npm install
   npm start
-  json-server --watch db.json --port 8001
+  npm local-start
   ```
+
+  (notice that the command start is for deploying in heroku)
+
 - If you want to change the port that json server uses you can specify it in that last command.
   Just remember to change it also in ./src/components/pages/Browse.js line 7.
+
+# To deploy the application, follow the below steps.
+
+## 1) Add GitHub Pages dependency package
+
+Install "gh-pages" package using the below command.
+
+```shell
+npm install gh-pages — save-dev
+Makefile
+```
+
+## 2) Add homepage property to package.json file
+
+Add the below property to your package.json file.
+For a GitHub user site:
+"homepage": "https://{username}.github.io"
+For a custom domain:
+"homepage": "https://testwebsite.com"
+
+## 3) Add deploy scripts to package.json file
+
+Add both predeploy and deploy property scripts to the package.json file as below,
+
+```shell
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+  Makefile
+```
+
+The "predeploy" command is used to bundle the react application and the "deploy" command helps to deploy the bundled file.
+
+## 4) Create a remote GitHub repository
+
+Initialize the Git using "git init" command.
+Add it as remote using "git remote add origin your-github-repository-url.git" command.
+
+## 5) Deploy the Application to GitHub Pages
+
+Now run the below command to deploy your react application to GitHub Pages.
+
+```shell
+npm run deploy
+Makefile
+```
+
+## 6) Access deployed site
+
+To get the published URL,
+
+Go to your GitHub Repo.
+Click Settings menu.
+
+Go to the "Pages" Section.
+
+You can see the "Your site is published" message.
+Select branch to "gh-pages" and click on the "Save" button.
+
+Now, you can access the deployed site using the published URL!
+
+### remember - Commit and Push the codebase
+
+Commit and push your code changes to the GitHub repo. It is an optional one. But, for maintaining the code base we can do this step.
+
+```shell
+git add .
+git commit -m "commit message"
+git push origin master
+```
 
 ## Heroku deploy
 
