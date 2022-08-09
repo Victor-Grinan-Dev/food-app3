@@ -7,25 +7,16 @@ dependencies:
 - react framework
 - axios
 - json server (for local serve the db.json file)
-<<<<<<< HEAD
-  clone the repo, cd in it and type in terminal:
 
-  ```shell
-  npm install
-  npm start
-  npm local-start
-=======
+clone the repo, cd in it and type in terminal:
 
- ## Use instructions
- clone the repo, cd in it and type in terminal:
-  ```shell
-  npm install
-  npm run local-start
-  npm run server
->>>>>>> 0ca8fffda3f63b66b7706e8a7a15d0792a954a8f
-  ```
+```shell
+npm install
+npm start
+npm local-start
+```
 
-  (notice that the command start is for deploying in heroku)
+(notice that the command 'npm start' is for deploying in heroku, use local-start instead)
 
 - If you want to change the port that json server uses you can specify it in that last command.
   Just remember to change it also in ./src/components/pages/Browse.js line 7.
@@ -37,9 +28,10 @@ dependencies:
 Install "gh-pages" package using the below command.
 
 ```shell
-npm install gh-pages — save-dev
-Makefile
+npm install gh-pages save-dev
 ```
+
+Makefile
 
 ## 2) Add homepage property to package.json file
 
@@ -56,12 +48,13 @@ Add both predeploy and deploy property scripts to the package.json file as below
 ```shell
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
-  Makefile
 ```
+
+Makefile
 
 The "predeploy" command is used to bundle the react application and the "deploy" command helps to deploy the bundled file.
 
-## 4) Create a remote GitHub repository
+## 4) Create a remote GitHub repository, if not done
 
 Initialize the Git using "git init" command.
 Add it as remote using "git remote add origin your-github-repository-url.git" command.
@@ -72,8 +65,9 @@ Now run the below command to deploy your react application to GitHub Pages.
 
 ```shell
 npm run deploy
-Makefile
 ```
+
+Makefile
 
 ## 6) Access deployed site
 
