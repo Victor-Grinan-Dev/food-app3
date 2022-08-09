@@ -7,12 +7,22 @@ dependencies:
 - react framework
 - axios
 - json server (for local serve the db.json file)
+<<<<<<< HEAD
   clone the repo, cd in it and type in terminal:
 
   ```shell
   npm install
   npm start
   npm local-start
+=======
+
+ ## Use instructions
+ clone the repo, cd in it and type in terminal:
+  ```shell
+  npm install
+  npm run local-start
+  npm run server
+>>>>>>> 0ca8fffda3f63b66b7706e8a7a15d0792a954a8f
   ```
 
   (notice that the command start is for deploying in heroku)

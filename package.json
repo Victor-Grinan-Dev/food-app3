@@ -21,7 +21,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "server": "json-server -p8001 --w db.json"
+=======
+    "server": "json-server -p3001 --w db.json"
+    
+>>>>>>> 0ca8fffda3f63b66b7706e8a7a15d0792a954a8f
   },
   "eslintConfig": {
     "extends": [
