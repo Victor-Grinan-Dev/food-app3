@@ -2,9 +2,13 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from '../UIs/Card';
-import css from './browse.module.css'
+import css from './browse.module.css';
 
-const databaseAPI = 'http://localhost:8011/database';
+//firebase
+import { db } from '../../firebase-config';
+import {collection, addDoc, Timestamp} from 'firebase/firestore';
+
+const databaseAPI = 'https://foodapp-c71e2-default-rtdb.europe-west1.firebasedatabase.app/database';
 const countriesAPI = 'https://restcountries.com/v2/all'
 
 function Browse() {

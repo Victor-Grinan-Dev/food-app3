@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import css from './addFood.module.css';
 
+//import {db} from './firebase';
+//import {collection, addDoc, Timestamp} from 'firebase/firestore';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { db } from '../../firebase-config';
+
 function AddFood() {
 
   const DB_API = 'http://localhost:8001/database';
@@ -38,7 +43,7 @@ function AddFood() {
     setData({ ...data, [e.target.name]: capitalStart(e.target.value) });
   };
 
-  const chanImage = (e) => {
+  const changeImage = (e) => {
     const head_api = 'https://source.unsplash.com/';
 
     if ((e.target.value.indexOf(head_api) == -1)){
@@ -54,17 +59,6 @@ function AddFood() {
     setData({ ...data, country_code: country.alpha2Code });
   };
 
-  const submitData = (e) => {
-    e.preventDefault();
-    if (!data.image || data.image === ""){
-      const endPoint = data.name.split(' ').join('-')
-      const randomPic = RANDOM_IMG_API + endPoint;
-      setData(data.image = randomPic)
-    }
-    axios.post(DB_API, data);
-    setData(emptyState);
-  };
-
   const changeIngredient = (e, i) => {
     const { name, value } = e.target;
     const ingredientlist = [...ingredients];
@@ -78,6 +72,31 @@ function AddFood() {
     const newIngredient = { id: ingredients.length + 1, ingredient: '', quantity: '' };
     setIngredients([...ingredients, newIngredient])
   }
+
+  const handleSubmit = async (e) => {
+    console.log("clicked")
+    //creating
+    e.preventDefault()
+    try {
+      await addDoc(collection(db, 'recipes'), {...data, created:Timestamp.now()})
+      onclose()
+    } catch (err) {
+      alert(err)
+    }
+  }
+/*
+  const submitData = (e) => {
+    e.preventDefault();
+    if (!data.image || data.image === ""){
+      const endPoint = data.name.split(' ').join('-')
+      const randomPic = RANDOM_IMG_API + endPoint;
+      setData(data.image = randomPic)
+    }
+    axios.post(DB_API, data);
+    setData(emptyState);
+  };
+
+*/
 
   return (
     <div className={css.addFood}>
@@ -151,7 +170,7 @@ function AddFood() {
             </div>
 
             <div className={css.spaced}>
-              <input type="submit" value="Submit" onClick={submitData}/>
+              <input type="submit" value="Submit" onClick={handleSubmit}/>
             </div>
 
       </form>
